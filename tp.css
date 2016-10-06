@@ -1,0 +1,146 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  font-family: sans-serif;
+  color: #444;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+.wrap {
+  width: 75%;
+  min-width: 18em;
+  max-width: 35em;
+  margin: 1em auto;
+}
+
+.head {
+  background-color: #AAA;
+  padding: 0.5em;
+}
+  .head h1, .head h2 {
+    display: inline-block;
+    font-size: 2em;
+  }
+  .head h1 {
+    color: #EEE;
+  }
+  .head h2 {
+    color: #888;
+  }
+
+.main {
+  padding: 1em 0.25em;
+}
+  .main td {
+    padding: 0.125em;
+    margin: auto 0;
+    vertical-align: middle;
+  }
+  .main audio {
+    width: 10em; 
+  }
+
+/* AUDIO PLAYER from http://tympanus.net/codrops/2012/12/04/responsive-touch-friendly-audio-player/ */
+
+.audioplayer {
+  height: 100%;
+  width: 1.5em;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.audioplayer > div {
+  position: absolute;
+}
+.audioplayer-playpause {
+  width: 1.5em;
+  height: 100%;
+  width: 100%;
+  text-align: left;
+  text-indent: -9999px;
+  cursor: pointer;
+  z-index: 2;
+  top: 0;
+  left: 0;
+}
+  .audioplayer-playpause:hover,
+  .audioplayer-playpause:focus{
+    background-color: #AAA;
+  }
+  .autioplayer-playpause a {
+    display: block;
+  }
+
+  .audioplayer:not(.audioplayer-playing) .audioplayer-playpause a {
+    width: 0;
+    height: 0;
+    border: 0.5em solid transparent;
+    border-right: none;
+    border-left-color: #000;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -0.5em 0 0 -0.25em;
+  }
+
+  .audioplayer-playing .audioplayer-playpause a {
+    width: 0.75em;
+    height: 0.75em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -0.375em 0 0 -0.375em;
+  }
+    .audioplayer-playing .audioplayer-playpause a:before,
+    .audioplayer-playing .audioplayer-playpause a:after {
+      width: 40%;
+      height: 100%;
+      background-color: #000;
+      content: '';
+      position: absolute;
+      top: 0;
+    }
+    .audioplayer-playing .audioplayer-playpause a:before {
+      left: 0;
+    }
+    .audioplayer-playing .audioplayer-playpause a:after {
+      right: 0;
+    }
+
+/* -- END AUDIO PLAYER -- */
+
+.foot {
+  font-size: 0.7em;
+  color: #888;
+  background-color: #DDD;
+  padding: 0.5em;
+}
+  .foot a {
+    color: #888;
+  }
+
+@media (max-width: 25em) {
+  .wrap {
+    width: 100%;
+    min-width: none;
+    max-width: none;
+    margin: 0;
+  }
+}

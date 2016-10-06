@@ -1,120 +1,54 @@
 <!doctype html>
 <html lang="">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie-edge">
-    <meta name="viewport" content="width=device-width" />
-    <title>HOPEFUL MUSIC</title>
-    <script
-        src="http://code.jquery.com/jquery-3.1.1.min.js"
-        crossorigin="anonymous"></script>
-    <script src="mediaelement/mediaelement-and-player.min.js"></script>
-    <link rel="stylesheet" href="mediaelement/mediaelementplayer.css" />
-    <style type="text/css">
-      html, body, div, span, applet, object, iframe,
-      h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-      a, abbr, acronym, address, big, cite, code,
-      del, dfn, em, img, ins, kbd, q, s, samp,
-      small, strike, strong, sub, sup, tt, var,
-      b, u, i, center,
-      dl, dt, dd, ol, ul, li,
-      fieldset, form, label, legend,
-      table, caption, tbody, tfoot, thead, tr, th, td,
-      article, aside, canvas, details, embed, 
-      figure, figcaption, footer, header, hgroup, 
-      menu, nav, output, ruby, section, summary,
-      time, mark, audio, video {
-        font-family: sans-serif;
-        color: #444;
-        margin: 0;
-        padding: 0;
-        border: 0;
-        font-size: 100%;
-        vertical-align: baseline;
-      }
 
-      body {
-        line-height: 1;
-      }
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie-edge">
+  <meta name="viewport" content="width=device-width" />
+  <title>TRYPTOPAIN | HOPEFUL MUSIC</title>
+  <link rel="stylesheet" href="tp.css" />
+</head>
 
-      ol, ul {
-        list-style: none;
-      }
-
-      .wrap {
-        width: 75%;
-        min-width: 18em;
-        max-width: 35em;
-        margin: 1em auto;
-      }
-
-      .head {
-        background-color: #AAA;
-        padding: 0.5em;
-      }
-
-      .main {
-        padding: 1em 0.25em;
-      }
-
-      .main td {
-        padding: 0 0.125em;
-        margin: auto 0;
-        vertical-align: middle;
-      }
-
-      .foot {
-        font-size: 0.7em;
-        background-color: #DDD;
-        padding: 0.5em;
-      }
-
-      @media (max-width: 25em) {
-        .wrap {
-          width: 100%;
-          min-width: none;
-          max-width: none;
-          margin: 0;
-        }
-      }
-    </style>
-    
-  </head>
-  <body>
-    <div class="wrap">
-      <div class="head"><h1>HOPEFUL MUSIC</h1></div>
-      <div class="main">
-        <table>
-          <tr>
-            <td>ONE:</td>
-            <td><audio src="music/ajryan-anvil.mp3"></audio></td>
-            <td><a href="music/ajryan-anvil.mp3">ANVIL</a></td>
-          </tr>
-          <tr>
-            <td>TWO:</td>
-            <td><audio src="music/ajryan-wrongcolor.mp3"></audio></td>
-            <td><a href="music/ajryan-wrongcolor.mp3">WRONG COLOR FOR A HEART</a></td>
-          </tr>
-        </table>
-      </div>
-      <div class="foot">
-        I am suffering, and I need your help. I know you suffer, and I am here for you. <a href="mailto:ajryan@tryptopain.com">ajryan@tryptopain.com</a>
-      </div>
+<body>
+  <div class="wrap">
+    <div class="head">
+      <h1>TRYPTOPAIN</h1><h2>HOPEFUL MUSIC</h1>
     </div>
-    <script type="text/javascript">
-      $('audio').mediaelementplayer({
-        audioWidth: 30,
-        audioHeight: 30,
-        startVolume: 1.0,
-        loop: false,
-        features: ['playpause'],
-        iPadUseNativeControls: true,
-        iPhoneUseNativeControls: true, 
-        AndroidUseNativeControls: true,
-        enableKeyboard: true,
-        pauseOtherPlayers: true,
-        keyActions: []
-      });  
-    </script>
-  </body>
+    <div class="main">
+      <table>
+        <tr>
+          <td>ONE:</td>
+          <td>
+            <!--<div class="audioplayer">-->
+              <audio src="music/ajryan-anvil.mp3" preload="auto"></audio>
+              <!--<div class="audioplayer-playpause"><a>Play</a></div>
+            </div>-->
+          </td>
+          <td><a href="music/ajryan-anvil.mp3">ANVIL</a></td>
+        </tr>
+        <tr>
+          <td>TWO:</td>
+          <td>
+            <!--<div class="audioplayer">-->
+              <audio src="music/ajryan-wrongcolor.mp3" preload="auto"></audio>
+              <!--<div class="audioplayer-playpause"><a>Play</a></div>
+            </div>-->
+          </td>
+          <td><a href="music/ajryan-wrongcolor.mp3">WRONG COLOR FOR A HEART</a></td>
+        </tr>
+      </table>
+    </div>
+    <div class="foot">
+      I am suffering, and I need your help. I know you suffer, and I am here for you. <a href="mailto:ajryan@tryptopain.com">ajryan@tryptopain.com</a>
+    </div>
+  </div>
+  <script src="http://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+  <script src="audioplayer.js"></script>
+  <script>
+    $(function(){
+      $('audio').audioPlayer();
+    });
+  </script>
+</body>
+
 </html>
