@@ -1,5 +1,6 @@
 /*
   AUTHOR: Osvaldas Valutis, www.osvaldas.info
+  from http://tympanus.net/codrops/2012/12/04/responsive-touch-friendly-audio-player/
 */
 
 ; (function ($, window, document, undefined) {
@@ -12,6 +13,10 @@
       var audioElement = document.createElement('audio');
       return !!(audioElement.canPlayType && audioElement.canPlayType('audio/' + file.split('.').pop().toLowerCase() + ';').replace(/no/, ''));
     };
+
+  var allAudios = [];
+  var allPlayers = [];
+  var audioCount = 0;
 
   $.fn.audioPlayer = function (params) {
     var params = $.extend({ classPrefix: 'audioplayer', strPlay: 'Play', strPause: 'Pause' }, params),
@@ -48,6 +53,10 @@
                        '</div></div>'),
         theAudio = isSupport ? thePlayer.find('audio') : thePlayer.find('embed'), theAudio = theAudio.get(0);
 
+        allPlayers[audioCount] = thePlayer;
+        allAudios[audioCount] = theAudio;
+        audioCount++;
+
         if (isSupport) {
           thePlayer.find('audio').css({ 'width': 0, 'height': 0, 'visibility': 'hidden' });
         }
@@ -68,6 +77,14 @@
         else {
           $(this).attr('title', params.strPause).find('a').html(params.strPause);
           thePlayer.addClass(cssClass.playing);
+
+          for (var i = 0; i < allAudios.length; i++) {
+            if (allAudios[i] != theAudio) {
+              allPlayers[i].removeClass(cssClass.playing);
+              allAudios[i].pause();
+            }
+          }
+
           isSupport ? theAudio.play() : theAudio.Play();
         }
         return false;

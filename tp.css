@@ -24,8 +24,8 @@ ol, ul {
 
 .wrap {
   width: 75%;
-  min-width: 18em;
-  max-width: 35em;
+  min-width: 28em;
+  max-width: 60em;
   margin: 1em auto;
 }
 
@@ -35,7 +35,7 @@ ol, ul {
 }
   .head h1, .head h2 {
     display: inline-block;
-    font-size: 2em;
+    font-size: 4em;
   }
   .head h1 {
     color: #EEE;
@@ -46,6 +46,7 @@ ol, ul {
 
 .main {
   padding: 1em 0.25em;
+  font-size: 2em;
 }
   .main td {
     padding: 0.125em;
@@ -127,7 +128,7 @@ ol, ul {
 /* -- END AUDIO PLAYER -- */
 
 .foot {
-  font-size: 0.7em;
+  font-size: 0.75em;
   color: #888;
   background-color: #DDD;
   padding: 0.5em;
@@ -136,7 +137,7 @@ ol, ul {
     color: #888;
   }
 
-@media (max-width: 25em) {
+@media (max-width: 28em) {
   .wrap {
     width: 100%;
     min-width: none;

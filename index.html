@@ -18,35 +18,27 @@
       <table>
         <tr>
           <td>ONE:</td>
-          <td>
-            <!--<div class="audioplayer">-->
-              <audio src="music/ajryan-anvil.mp3" preload="auto"></audio>
-              <!--<div class="audioplayer-playpause"><a>Play</a></div>
-            </div>-->
-          </td>
+          <td><audio src="music/ajryan-anvil.mp3" preload="auto"></audio></td>
           <td><a href="music/ajryan-anvil.mp3">ANVIL</a></td>
         </tr>
         <tr>
           <td>TWO:</td>
-          <td>
-            <!--<div class="audioplayer">-->
-              <audio src="music/ajryan-wrongcolor.mp3" preload="auto"></audio>
-              <!--<div class="audioplayer-playpause"><a>Play</a></div>
-            </div>-->
-          </td>
+          <td><audio src="music/ajryan-wrongcolor.mp3" preload="auto"></audio></td>
           <td><a href="music/ajryan-wrongcolor.mp3">WRONG COLOR FOR A HEART</a></td>
         </tr>
       </table>
     </div>
     <div class="foot">
-      I am suffering, and I need your help. I know you suffer, and I am here for you. <a href="mailto:ajryan@tryptopain.com">ajryan@tryptopain.com</a>
+      love is real. <a href="mailto:ajryan@tryptopain.com">ajryan@tryptopain.com</a>
     </div>
   </div>
   <script src="//code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+  <script src="//code.jquery.com/color/jquery.color-2.0b1.min.js"></script>
   <script src="audioplayer.js"></script>
   <script>
     $(function(){
-      $('audio').audioPlayer();
+      var $audio = $('audio');
+      $audio.audioPlayer();
     });
   </script>
 </body>
