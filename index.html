@@ -1,6 +1,14 @@
-<html>
+<!doctype html>
+<html lang="">
   <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie-edge">
     <title>HOPEFUL MUSIC</title>
+    <script
+        src="http://code.jquery.com/jquery-3.1.1.min.js"
+        crossorigin="anonymous"></script>
+    <script src="mediaelement/mediaelement-and-player.min.js"></script>
+    <link rel="stylesheet" href="mediaelement/mediaelementplayer.css" />
     <style type="text/css">
       html, body, div, span, applet, object, iframe,
       h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -50,6 +58,8 @@
 
       .main td {
         padding: 0 0.125em;
+        margin: auto 0;
+        vertical-align: middle;
       }
 
       .foot {
@@ -67,6 +77,7 @@
         }
       }
     </style>
+    
   </head>
   <body>
     <div class="wrap">
@@ -74,10 +85,14 @@
       <div class="main">
         <table>
           <tr>
-            <td>ONE:</td><td><a href="music/ajryan-anvil.mp3">ANVIL</a></td>
+            <td>ONE:</td>
+            <td><audio src="music/ajryan-anvil.mp3"></audio></td>
+            <td><a href="music/ajryan-anvil.mp3">ANVIL</a></td>
           </tr>
           <tr>
-            <td>TWO:</td><td><a href="music/ajryan-wrongcolor.mp3">WRONG COLOR FOR A HEART</a></td>
+            <td>TWO:</td>
+            <td><audio src="music/ajryan-wrongcolor.mp3"></audio></td>
+            <td><a href="music/ajryan-wrongcolor.mp3">WRONG COLOR FOR A HEART</a></td>
           </tr>
         </table>
       </div>
@@ -85,5 +100,20 @@
         I am suffering, and I need your help. I know you suffer, and I am here for you. <a href="mailto:ajryan@tryptopain.com">ajryan@tryptopain.com</a>
       </div>
     </div>
+    <script type="text/javascript">
+      $('audio').mediaelementplayer({
+        audioWidth: 30,
+        audioHeight: 30,
+        startVolume: 1.0,
+        loop: false,
+        features: ['playpause'],
+        iPadUseNativeControls: true,
+        iPhoneUseNativeControls: true, 
+        AndroidUseNativeControls: true,
+        enableKeyboard: true,
+        pauseOtherPlayers: true,
+        keyActions: []
+      });  
+    </script>
   </body>
 </html>
