@@ -56,7 +56,8 @@ ol, ul {
 .head {
   font-family: webnarbold;
   background-color: #AAA;
-  padding: 0.5em;
+  padding: 2em 0.5em;
+  text-align: center;
 }
   .head h1, .head h2 {
     display: inline-block;
