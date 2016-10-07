@@ -4,8 +4,31 @@
   box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'webnarbold';
+    src: url('fonts/webnar-bold-webfont.eot');
+    src: url('fonts/webnar-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/webnar-bold-webfont.woff2') format('woff2'),
+         url('fonts/webnar-bold-webfont.woff') format('woff'),
+         url('fonts/webnar-bold-webfont.ttf') format('truetype'),
+         url('fonts/webnar-bold-webfont.svg#webnarbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'publica';
+    src: url('fonts/publicasans-regular-webfont.eot');
+    src: url('fonts/publicasans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/publicasans-regular-webfont.woff2') format('woff2'),
+         url('fonts/publicasans-regular-webfont.woff') format('woff'),
+         url('fonts/publicasans-regular-webfont.ttf') format('truetype'),
+         url('fonts/publicasans-regular-webfont.svg#webnarbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-  font-family: sans-serif;
   color: #444;
   margin: 0;
   padding: 0;
@@ -15,6 +38,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 
 body {
+  background-color: #333;
   line-height: 1;
 }
 
@@ -30,6 +54,7 @@ ol, ul {
 }
 
 .head {
+  font-family: webnarbold;
   background-color: #AAA;
   padding: 0.5em;
 }
@@ -45,7 +70,9 @@ ol, ul {
   }
 
 .main {
+  background-color: #FAFAFA;
   padding: 1em 0.25em;
+  font-family: publica;
   font-size: 2em;
 }
   .main td {
@@ -60,8 +87,8 @@ ol, ul {
 /* AUDIO PLAYER from http://tympanus.net/codrops/2012/12/04/responsive-touch-friendly-audio-player/ */
 
 .audioplayer {
-  height: 100%;
   width: 1.5em;
+  height: 1em;
   margin: 0 auto;
   position: relative;
   z-index: 1;
@@ -71,8 +98,7 @@ ol, ul {
 }
 .audioplayer-playpause {
   width: 1.5em;
-  height: 100%;
-  width: 100%;
+  height: 1em;
   text-align: left;
   text-indent: -9999px;
   cursor: pointer;
@@ -91,14 +117,14 @@ ol, ul {
   .audioplayer:not(.audioplayer-playing) .audioplayer-playpause a {
     width: 0;
     height: 0;
-    border: 0.5em solid transparent;
+    border: 0.4em solid transparent;
     border-right: none;
     border-left-color: #000;
     content: '';
     position: absolute;
     top: 50%;
     left: 50%;
-    margin: -0.5em 0 0 -0.25em;
+    margin: -0.4em 0 0 -0.2em;
   }
 
   .audioplayer-playing .audioplayer-playpause a {
@@ -128,6 +154,7 @@ ol, ul {
 /* -- END AUDIO PLAYER -- */
 
 .foot {
+  font-family: publica;
   font-size: 0.75em;
   color: #888;
   background-color: #DDD;
