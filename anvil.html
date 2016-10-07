@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie-edge">
+  <meta name="viewport" content="width=device-width" />
+
+  <meta name="twitter:card" content="player" />
+  <meta name="twitter:site" content="@tryptopain" />
+  <meta name="twitter:creator" content="@ajryan" />
+  <meta name="twitter:title" content="TRYPTOPAIN | ANVIL" />
+  <meta name="twitter:description" content="ANVIL" />
+  <meta name="twitter:image" content="https://www.tryptopain.com/hero.png" />
+  <meta name="twitter:player" content="https://www.tryptopain.com/anvil-player.html" />
+  <meta name="twitter:player:stream" content="https://www.tryptopain.com/music/ajryan-anvil.mp3" />
+  <meta name="twitter:player:stream:content_type" content="audio/mp3" />
+
+  <title>TRYPTOPAIN | ANVIL</title>
+  <link rel="stylesheet" href="tp.css" />
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="head">
+      <a href="/"><h1>TRYPTOPAIN</h1></a><h2>ANVIL</h2>
+    </div>
+    <div class="main">
+      <table>
+        <tr>
+          <td><audio src="music/ajryan-anvil.mp3" preload="auto"></audio></td>
+          <td><a href="music/ajryan-anvil.mp3">ANVIL</a></td>
+        </tr>
+      </table>
+    </div>
+    <div class="foot">
+      love is real. <a href="mailto:ajryan@tryptopain.com">ajryan@tryptopain.com</a>
+    </div>
+  </div>
+  <script src="//code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+  <script src="//code.jquery.com/color/jquery.color-2.0b1.min.js"></script>
+  <script src="audioplayer.js"></script>
+  <script>
+    $(function(){
+      var $audio = $('audio');
+      $audio.audioPlayer();
+    });
+  </script>
+</body>
+
+</html>
