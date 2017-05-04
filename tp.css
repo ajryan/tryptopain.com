@@ -29,7 +29,7 @@
 }
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-  color: #444;
+  color: #555;
   margin: 0;
   padding: 0;
   border: 0;
@@ -48,7 +48,7 @@ ol, ul {
 
 .wrap {
   width: 75%;
-  min-width: 28em;
+  min-width: 300px;
   max-width: 60em;
   margin: 1em auto;
 }
@@ -80,12 +80,21 @@ ol, ul {
   font-size: 2em;
 }
   .main td {
-    padding: 0.125em;
+    padding: 0.4em 0.125em;
     margin: auto 0;
     vertical-align: middle;
   }
   .main audio {
     width: 10em; 
+  }
+
+.songlink:link {
+  text-decoration: none;
+  border-bottom: 2px solid #777;
+  line-height: 1.15em;
+}
+  .songlink:hover {
+    border-bottom: 2px solid #999;
   }
 
 /* AUDIO PLAYER from http://tympanus.net/codrops/2012/12/04/responsive-touch-friendly-audio-player/ */
@@ -163,12 +172,13 @@ ol, ul {
   color: #888;
   background-color: #DDD;
   padding: 0.5em;
+  text-align: center;
 }
   .foot a {
     color: #888;
   }
 
-@media (max-width: 28em) {
+@media (max-width: 35em) {
   .wrap {
     width: 100%;
     min-width: none;
